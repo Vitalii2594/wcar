@@ -31,11 +31,11 @@ const Pricing: React.FC<PricingProps> = ({ t }) => {
            <p className="text-gray-300 mb-8 leading-relaxed">
           *Opłata za dojazd wynosi 1,5 zł za 1 przejechany kilometr. Opłaty
           rejestracyjne, ubezpieczenie, przegląd, service i inne wydatki pokrywa
-          klient. Podczas współpracy Autokrakus występuje jako pośrednik i pełni
+          klient. Podczas współpracy WitalCar występuje jako pośrednik i pełni
           funkcję doradczą.
         </p>
         </div>
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid slg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
             <div
               key={index}
