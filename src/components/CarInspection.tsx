@@ -1,5 +1,5 @@
-import React from 'react';
-import { Search, Phone, Camera, Handshake } from 'lucide-react';
+import React from "react";
+import { Search, Phone, Camera, Handshake } from "lucide-react";
 
 interface CarInspectionProps {
   t: any;
@@ -23,20 +23,24 @@ const CarInspection: React.FC<CarInspectionProps> = ({ t }) => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {t.inspection.steps.map((step: any, index: number) => {
             const Icon = stepIcons[index];
-            
+
             return (
               <div key={index} className="text-center group">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
                     {step.number}
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.description}</p>
+
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             );
           })}
