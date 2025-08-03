@@ -36,11 +36,10 @@ const Header: React.FC<HeaderProps> = ({
             {/* <img className="text-xl font-bold text-white">WitalCar</span> */}
 
             <img
-              src="/src/img/logo.jpeg"
+              src="../img//logo.jpeg"
               alt="Logo WICAR"
               width="80"
               height="70"
-              
             ></img>
           </div>
 
