@@ -37,9 +37,10 @@ const Header: React.FC<HeaderProps> = ({
 
             <img
               src="/src/img/logo.jpeg"
-              alt="Girl in a jacket"
+              alt="Logo WICAR"
               width="80"
               height="70"
+              
             ></img>
           </div>
 
