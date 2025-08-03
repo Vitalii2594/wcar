@@ -15,15 +15,15 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
       alt: "Professional car diagnostic",
     },
     {
-      url: "src/img/juke.jpg",
+      url: "/src/img/juke.jpg",
       alt: "Car documentation check",
     },
     {
-      url: "src/img/juke.jpg",
+      url: "../src/img/juke.jpg",
       alt: "Engine inspection",
     },
     {
-      url: "img/juke.jpgs",
+      url: "./src/img/juke.jpg",
       alt: "Car exterior check",
     },
     {
