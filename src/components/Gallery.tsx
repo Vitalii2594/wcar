@@ -7,7 +7,7 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ t }) => {
   const images = [
     {
-      url: "./src/img/juke.jpg",
+      url: "/src/img/juke.jpg",
       alt: "Car inspection process",
     },
     {
