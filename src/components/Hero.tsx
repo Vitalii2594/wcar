@@ -20,12 +20,12 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+        {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
           {t.hero.title}
-        </h1>
-        <p className="text-xl sm:text-2xl text-cyan-100 mb-8 font-light">
+        </h1> */}
+        <h1 className="text-xl sm:text-2xl text-cyan-100 mb-8 font-light">
           {t.hero.subtitle}
-        </p>
+        </h1>
         <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
           {t.hero.description}
         </p>
