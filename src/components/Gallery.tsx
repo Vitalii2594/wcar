@@ -11,23 +11,23 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
       alt: "Car inspection process",
     },
     {
-      url: "./src/img/ux.jpg",
+      url: "src/img/ux.jpg",
       alt: "Professional car diagnostic",
     },
     {
-      url: "./src/img/juke.jpg",
+      url: "src/img/juke.jpg",
       alt: "Car documentation check",
     },
     {
-      url: "./src/img/juke.jpg",
+      url: "src/img/juke.jpg",
       alt: "Engine inspection",
     },
     {
-      url: "./src/img/juke.jpg",
+      url: "src/img/juke.jpg",
       alt: "Car exterior check",
     },
     {
-      url: "./src/img/juke.jpg",
+      url: "src/img/juke.jpg",
       alt: "Professional car service",
     },
   ];

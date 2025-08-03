@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({
             {/* <img className="text-xl font-bold text-white">WitalCar</span> */}
 
             <img
-              src="./src/img/logo.jpg"
+              src="src/img/logo.jpg"
               alt="Girl in a jacket"
               width="80"
               height="700"
