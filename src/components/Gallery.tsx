@@ -23,7 +23,7 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
       alt: "Engine inspection",
     },
     {
-      url: "src/img/juke.jpg",
+      url: "img/juke.jpgs",
       alt: "Car exterior check",
     },
     {
