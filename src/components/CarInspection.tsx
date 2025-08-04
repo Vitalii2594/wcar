@@ -1,13 +1,27 @@
 import React from "react";
 import { Search, Phone, Camera, Handshake } from "lucide-react";
 
-interface CarInspectionProps {
-  t: any;
+interface InspectionStep {
+  number: number | string;
+  title: string;
+  description: string;
 }
 
-const CarInspection: React.FC<CarInspectionProps> = ({ t }) => {
-  const stepIcons = [Search, Phone, Camera, Handshake];
+interface InspectionTranslations {
+  inspection: {
+    title: string;
+    subtitle: string;
+    steps: InspectionStep[];
+  };
+}
 
+interface CarInspectionProps {
+  t: InspectionTranslations;
+}
+
+const stepIcons = [Search, Phone, Camera, Handshake];
+
+const CarInspection: React.FC<CarInspectionProps> = ({ t }) => {
   return (
     <section id="inspection" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,8 +35,8 @@ const CarInspection: React.FC<CarInspectionProps> = ({ t }) => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.inspection.steps.map((step: any, index: number) => {
-            const Icon = stepIcons[index];
+          {t.inspection.steps.map((step, index) => {
+            const Icon = stepIcons[index] || Search; // fallback na Search jeśli brak ikony
 
             return (
               <div key={index} className="text-center group">
@@ -38,9 +52,7 @@ const CarInspection: React.FC<CarInspectionProps> = ({ t }) => {
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {step.description}
-                </p>
+                <p className="text-gray-400 leading-relaxed">{step.description}</p>
               </div>
             );
           })}

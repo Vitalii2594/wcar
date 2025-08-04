@@ -1,8 +1,25 @@
 import React from 'react';
 import { ShoppingCart, FileText, TrendingUp, CheckCircle } from 'lucide-react';
 
+interface TranslationFeatures {
+  title: string;
+  price: string;
+  features: string[];
+}
+
+interface ServicesTranslation {
+  purchase: TranslationFeatures;
+  registration: TranslationFeatures;
+  sale: TranslationFeatures;
+  title: string;
+}
+
+interface TranslationRoot {
+  services: ServicesTranslation;
+}
+
 interface ServicesProps {
-  t: any;
+  t: TranslationRoot;
 }
 
 const Services: React.FC<ServicesProps> = ({ t }) => {
@@ -55,10 +72,13 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-800">
+    <section id="services" className="py-20 bg-gray-800" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2
+            id="services-heading"
+            className="text-3xl sm:text-4xl font-bold text-white mb-6"
+          >
             {t.services.title}
           </h2>
         </div>
@@ -67,17 +87,23 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
           {services.map((service, index) => {
             const colors = getColorClasses(service.color);
             const Icon = service.icon;
-            
+
             return (
-              <div key={index} className="bg-gray-900 rounded-2xl shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden group border border-gray-700">
+              <article
+                key={index}
+                className="bg-gray-900 rounded-2xl shadow-2xl transition-all duration-300 overflow-hidden border border-gray-700"
+                aria-label={`${service.title} service`}
+              >
                 <div className={`${colors.bgLight} px-8 py-6 text-center`}>
-                  <div className={`w-16 h-16 ${colors.bg} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <div
+                    className={`${colors.bg} ${colors.hover} rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 transition-transform duration-300 shadow-lg`}
+                  >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                   <p className={`text-2xl font-bold ${colors.text}`}>{service.price}</p>
                 </div>
-                
+
                 <div className="px-8 py-6">
                   <ul className="space-y-4">
                     {service.features.map((feature, featureIndex) => (
@@ -88,7 +114,7 @@ const Services: React.FC<ServicesProps> = ({ t }) => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </article>
             );
           })}
         </div>

@@ -10,26 +10,48 @@ import {
   MessageSquare,
 } from "lucide-react";
 
+interface Translation {
+  contact: {
+    title: string;
+    subtitle: string;
+  };
+  cta: {
+    title: string;
+    description: string;
+    buttons: {
+      call: string;
+      email: string;
+      telegram: string;
+      viber: string;
+      whatsapp: string;
+    };
+  };
+  footer: {
+    partnerText: string;
+    copyright: string;
+  };
+}
+
 interface ContactProps {
-  t: any;
-  logoImage: string;
+  t: Translation;
+  logoImage?: string;
 }
 
 const ContactInfo: React.FC = () => (
   <div className="flex flex-col space-y-2">
     <a
-      href="tel:+48123456789"
+      href="tel:+48535367308"
       className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center md:justify-center"
     >
       <Phone className="w-5 h-5 mr-2" />
-      +48 123 456 789
+      +48 535 267 308
     </a>
     <a
-      href="mailto:kontakt@witalcar.pl"
+      href="mailto:kontakt@clikdrive.pl"
       className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center md:justify-center"
     >
       <Mail className="w-5 h-5 mr-2" />
-      kontakt@witalcar.pl
+      kontakt@clikdrive.pl
     </a>
   </div>
 );
@@ -51,48 +73,48 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
     {
       icon: MessageCircle,
       name: "Telegram",
-      href: "https://t.me/witalcar",
+      href: "https://t.me/WJ_Channel",
       color: "hover:text-blue-500",
     },
   ];
 
   const contactButtons = [
     {
+      id: "call",
       icon: Phone,
-      text: "Zadzwoń teraz",
-      href: "tel:+48123456789",
+      href: "tel:+48535267308",
       gradient: "from-green-500 to-emerald-600",
       hoverGradient: "from-green-600 to-emerald-700",
       shadow: "hover:shadow-green-500/25",
     },
     {
+      id: "email",
       icon: Mail,
-      text: "Napisz email",
-      href: "mailto:kontakt@witalcar.pl",
+      href: "mailto:kontakt@clikdrive.pl",
       gradient: "from-cyan-500 to-blue-600",
       hoverGradient: "from-cyan-600 to-blue-700",
       shadow: "hover:shadow-cyan-500/25",
     },
     {
+      id: "telegram",
       icon: MessageCircle,
-      text: "Telegram",
-      href: "https://t.me/witalcar",
+      href: "https://t.me/WJ_Channel",
       gradient: "from-purple-500 to-pink-600",
       hoverGradient: "from-purple-600 to-pink-700",
       shadow: "hover:shadow-purple-500/25",
     },
     {
+      id: "viber",
       icon: MessageSquare,
-      text: "Viber",
-      href: "viber://chat?number=+48123456789",
+      href: "viber://chat?number=+48535267308",
       gradient: "from-violet-600 to-purple-600",
       hoverGradient: "from-violet-700 to-purple-700",
       shadow: "hover:shadow-violet-500/25",
     },
     {
+      id: "whatsapp",
       icon: Send,
-      text: "WhatsApp",
-      href: "https://wa.me/48123456789",
+      href: "https://wa.me/48535267308",
       gradient: "from-green-600 to-emerald-700",
       hoverGradient: "from-green-700 to-emerald-800",
       shadow: "hover:shadow-green-500/25",
@@ -105,32 +127,24 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              {t.contact.title}
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">{t.contact.title}</h2>
             <p className="text-xl text-gray-300">{t.contact.subtitle}</p>
           </div>
 
           <div className="flex justify-center">
             <div className="bg-gray-800 rounded-2xl p-8 max-w-2xl w-full">
               <div className="text-center">
-                <h3 className="text-2xl font-bold mb-6 text-white">
-                  Gotowy na zakup?
-                </h3>
-                <p className="text-gray-300 mb-8 leading-relaxed">
-                  Skontaktuj się z nami już dziś i pozwól nam pomóc Ci znaleźć
-                  idealny samochód. Nasze doświadczenie i profesjonalizm
-                  gwarantują bezpieczny zakup.
-                </p>
+                <h3 className="text-2xl font-bold mb-6 text-white">{t.cta.title}</h3>
+                <p className="text-gray-300 mb-8 leading-relaxed">{t.cta.description}</p>
                 <div className="space-y-4">
-                  {contactButtons.map((button, index) => (
+                  {contactButtons.map((button) => (
                     <a
-                      key={index}
+                      key={button.id}
                       href={button.href}
                       className={`block w-full bg-gradient-to-r ${button.gradient} text-white py-4 px-6 rounded-full font-semibold hover:${button.hoverGradient} transition-all duration-200 shadow-lg ${button.shadow} flex items-center justify-center space-x-2`}
                     >
                       <button.icon className="w-5 h-5" />
-                      <span>{button.text}</span>
+                      <span>{t.cta.buttons[button.id]}</span>
                     </a>
                   ))}
                 </div>
@@ -146,21 +160,13 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Lewa kolumna - Logo i tekst */}
             <div className="flex flex-col items-center md:items-start">
-              <img
-                src={logoFooter}
-                alt="Logo WICAR"
-                className="w-40 h-auto" // Responsywne wymiary
-              />
-              <p className="text-gray-400 text-center md:text-left">
-                Twój partner w zakupie samochodu
-              </p>
+              <img src={logoImage || logoFooter} alt="Logo WICAR" className="w-40 h-auto" />
+              <p className="text-gray-400 text-center md:text-left">{t.footer.partnerText}</p>
             </div>
 
             {/* Środkowa kolumna - Social media */}
             <div className="flex flex-col items-center">
-              <p className="text-white text-lg font-semibold mb-2 text-center">
-                Social Media
-              </p>
+              <p className="text-white text-lg font-semibold mb-2 text-center">Social Media</p>
               <div className="flex justify-center space-x-6">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
@@ -180,18 +186,14 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
 
             {/* Prawa kolumna - Kontakt */}
             <div className="flex flex-col items-center">
-              <p className="text-white text-lg font-semibold mb-2 text-center">
-                Kontakt
-              </p>
+              <p className="text-white text-lg font-semibold mb-2 text-center">Kontakt</p>
               <ContactInfo />
             </div>
           </div>
 
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-            <p>
-              © {new Date().getFullYear()} WICAR. Wszelkie prawa zastrzeżone.
-            </p>
+            <p>{t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}</p>
           </div>
         </div>
       </footer>

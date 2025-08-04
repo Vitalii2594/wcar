@@ -1,13 +1,20 @@
 import React from "react";
-import juke1 from "../img//juke.jpg";
+import juke1 from "../img/juke.jpg";
 import ux1 from "../img/ux.jpg";
 import auris1 from "../img/auris.jpg";
 import nissan1 from "../img/nissan.jpg";
 import c5 from "../img/c5.jpg";
 import accord1 from "../img/accord.jpg";
 
+interface GalleryTranslations {
+  gallery: {
+    title: string;
+    subtitle: string;
+  };
+}
+
 interface GalleryProps {
-  t: any;
+  t: GalleryTranslations;
 }
 
 const Gallery: React.FC<GalleryProps> = ({ t }) => {
@@ -58,15 +65,10 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
             >
               <img
                 src={image.url}
-                // alt={image.alt}
+                alt={image.alt}
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
-              {/* <div className="absolute inset-0 flex items-end p-4">
-                <h3 className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {image.alt}
-                </h3>
-              </div> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}

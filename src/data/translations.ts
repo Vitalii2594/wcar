@@ -11,7 +11,7 @@ export const translations = {
       contact: "Kontakt",
     },
     hero: {
-      title: "WitalCar",
+      title: "CLIKDRIVE",
       subtitle: "Profesjonalna pomoc w zakupie samochodu",
       description:
         "Znajdziemy dla Ciebie idealny samochód, przeprowadzimy szczegółową kontrolę techniczną i załatwimy wszystkie formalności. Zaufaj ekspertom!",
@@ -20,7 +20,18 @@ export const translations = {
     about: {
       title: "O nas",
       description:
-        "Jesteśmy doświadczonym zespołem specjalistów, którzy pomogą Ci znaleźć idealny samochód. Oferujemy kompleksową obsługę od wyszukania pojazdu, przez jego szczegółową kontrolę, aż po załatwienie wszystkich formalności związanych z zakupem i rejestracją.",
+        "Jesteśmy pasjonatami motoryzacji, którzy pomagają znaleźć idealny samochód dla każdego klienta.",
+      cards: {
+        teamTitle: "Doświadczony zespół",
+        teamDesc:
+          "Specjaliści z wieloletnim doświadczeniem w branży motoryzacyjnej",
+        qualityTitle: "Profesjonalne podejście",
+        qualityDesc:
+          "Każdy samochód sprawdzamy z najwyższą starannością i precyzją",
+        safetyTitle: "Gwarancja bezpieczeństwa",
+        safetyDesc:
+          "Kompleksowa weryfikacja techniczna i dokumentacyjna pojazdu",
+      },
     },
     services: {
       title: "Nasze usługi",
@@ -60,7 +71,7 @@ export const translations = {
       title: "Cennik",
       popularLabel: "Popularny",
       disclaimer:
-        "*Opłata za dojazd wynosi 1,5 zł za każdy przejechany kilometr. Opłaty rejestracyjne, ubezpieczenie, przegląd, serwis oraz inne wydatki pokrywa klient. WiCar podczas współpracy występuje wyłącznie w roli pośrednika i doradcy.",
+        "*Opłata za dojazd wynosi 1,5 zł za każdy przejechany kilometr. Opłaty rejestracyjne, ubezpieczenie, przegląd, serwis oraz inne wydatki pokrywa klient. CLIKDRIVE podczas współpracy występuje wyłącznie w roli pośrednika i doradcy.",
       basic: {
         name: "Podstawowy",
         price: "1350 zł",
@@ -176,13 +187,33 @@ export const translations = {
     gallery: {
       title: "Galeria",
     },
+    // contact: {
+    //   title: "Kontakt",
+    //   subtitle: "Skontaktuj się z nami już dziś",
+    //   phone: "Telefon",
+    //   email: "Email",
+    //   telegram: "Telegram",
+    //   social: "Śledź nas",
+    // },
     contact: {
-      title: "Kontakt",
-      subtitle: "Skontaktuj się z nami już dziś",
-      phone: "Telefon",
-      email: "Email",
-      telegram: "Telegram",
-      social: "Śledź nas",
+      title: "Skontaktuj się z nami",
+      subtitle: "Jesteśmy tu, by pomóc Ci znaleźć idealne auto.",
+    },
+    cta: {
+      title: "Gotowy na zakup?",
+      description:
+        "Skontaktuj się z nami już dziś i pozwól nam pomóc Ci znaleźć idealny samochód. Nasze doświadczenie i profesjonalizm gwarantują bezpieczny zakup.",
+      buttons: {
+        call: "Zadzwoń teraz",
+        email: "Napisz email",
+        telegram: "Telegram",
+        viber: "Viber",
+        whatsapp: "WhatsApp",
+      },
+    },
+    footer: {
+      copyright: "© {year} CLIKDRIVE. Wszelkie prawa zastrzeżone.",
+      partnerText: "Twój partner w zakupie samochodu",
     },
   },
   uk: {
@@ -195,7 +226,7 @@ export const translations = {
       contact: "Контакти",
     },
     hero: {
-      title: "WitalCar",
+      title: "CLIKDRIVE",
       subtitle: "Професійна допомога у купівлі автомобіля",
       description:
         "Знайдемо для вас ідеальний автомобіль, проведемо детальну технічну перевірку та оформимо всі формальності. Довіртеся експертам!",
@@ -204,8 +235,18 @@ export const translations = {
     about: {
       title: "Про нас",
       description:
-        "Ми досвідчена команда спеціалістів, які допоможуть вам знайти ідеальний автомобіль. Пропонуємо комплексне обслуговування від пошуку транспортного засобу, через його детальну перевірку, до оформлення всіх формальностей, пов'язаних з купівлею та реєстрацією.",
+        "Ми — автолюбителі, які допомагають кожному знайти ідеальне авто.",
+      cards: {
+        teamTitle: "Досвідчена команда",
+        teamDesc: "Фахівці з багаторічним досвідом у сфері автомобілів",
+        qualityTitle: "Професійний підхід",
+        qualityDesc:
+          "Кожен автомобіль перевіряємо з максимальною точністю та турботою",
+        safetyTitle: "Гарантія безпеки",
+        safetyDesc: "Комплексна технічна та документальна перевірка авто",
+      },
     },
+
     services: {
       title: "Наші послуги",
       purchase: {
@@ -242,10 +283,10 @@ export const translations = {
     },
     pricing: {
       title: "Прайс-лист",
-       popularLabel: "Популярний вибір",
+      popularLabel: "Популярний вибір",
       disclaimer:
-        "Плата за проїзд становить 1,5 злотого за кожен пройдений кілометр. Реєстраційні збори, страхування, техогляд, обслуговування та інші витрати покриває клієнт. WilCar під час співпраці виступає виключно в ролі посередника та консультанта.",
-     
+        "Плата за проїзд становить 1,5 злотого за кожен пройдений кілометр. Реєстраційні збори, страхування, техогляд, обслуговування та інші витрати покриває клієнт. CLIKDRIVE під час співпраці виступає виключно в ролі посередника та консультанта.",
+
       basic: {
         name: "Базовий",
         price: "1350 zł",
@@ -361,13 +402,34 @@ export const translations = {
     gallery: {
       title: "Галерея",
     },
+    // contact: {
+    //   title: "Контакти",
+    //   subtitle: "Зв'яжіться з нами сьогодні",
+    //   phone: "Телефон",
+    //   email: "Електронна пошта",
+    //   telegram: "Telegram",
+    //   social: "Стежте за нами",
+    // },
     contact: {
-      title: "Контакти",
-      subtitle: "Зв'яжіться з нами сьогодні",
-      phone: "Телефон",
-      email: "Електронна пошта",
-      telegram: "Telegram",
-      social: "Стежте за нами",
+      title: "Зв'яжіться з нами",
+      subtitle: "Ми тут, щоб допомогти вам знайти ідеальне авто.",
+    },
+    cta: {
+      title: "Готові до покупки?",
+      description:
+        "Зв’яжіться з нами вже сьогодні, і ми допоможемо вам знайти ідеальний автомобіль. Наш досвід і професіоналізм гарантують безпечну покупку.",
+      buttons: {
+        call: "Зателефонуйте зараз",
+        email: "Напишіть електронного листа",
+        telegram: "Телеграм",
+        viber: "Вайбер",
+        whatsapp: "Вотсап",
+      },
+    },
+
+    footer: {
+      copyright: "© {year} CLIKDRIVE. Всі права захищені.",
+      partnerText: "Ваш партнер у купівлі автомобіля",
     },
   },
   ru: {
@@ -380,7 +442,7 @@ export const translations = {
       contact: "Контакты",
     },
     hero: {
-      title: "WitalCar",
+      title: "CLIKDRIVE",
       subtitle: "Профессиональная помощь в покупке автомобиля",
       description:
         "Найдем для вас идеальный автомобиль, проведем детальную техническую проверку и оформим все формальности. Доверьтесь экспертам!",
@@ -389,8 +451,18 @@ export const translations = {
     about: {
       title: "О нас",
       description:
-        "Мы опытная команда специалистов, которые помогут вам найти идеальный автомобиль. Предлагаем комплексное обслуживание от поиска транспортного средства, через его детальную проверку, до оформления всех формальностей, связанных с покупкой и регистрацией.",
+        "Мы — автолюбители, которые помогают каждому найти идеальное авто.",
+      cards: {
+        teamTitle: "Опытная команда",
+        teamDesc: "Специалисты с многолетним опытом в автомобильной сфере",
+        qualityTitle: "Профессиональный подход",
+        qualityDesc:
+          "Каждый автомобиль проверяем с максимальной точностью и вниманием",
+        safetyTitle: "Гарантия безопасности",
+        safetyDesc: "Комплексная техническая и документальная проверка авто",
+      },
     },
+
     services: {
       title: "Наши услуги",
       purchase: {
@@ -429,7 +501,7 @@ export const translations = {
       title: "Прайс-лист",
       popularLabel: "Популярный выбор",
       disclaimer:
-        "*Плата за выезд составляет 1,5 злотых за каждый пройденный километр. Регистрационные сборы, страховка, техосмотр, обслуживание и другие расходы оплачиваются клиентом. WiCar в процессе сотрудничества выступает исключительно в роли посредника и консультанта.",
+        "*Плата за выезд составляет 1,5 злотых за каждый пройденный километр. Регистрационные сборы, страховка, техосмотр, обслуживание и другие расходы оплачиваются клиентом. CLIKDRIVE в процессе сотрудничества выступает исключительно в роли посредника и консультанта.",
       basic: {
         name: "Базовый",
         price: "1350 zł",
@@ -545,13 +617,33 @@ export const translations = {
     gallery: {
       title: "Галерея",
     },
+    // contact: {
+    //   title: "Контакты",
+    //   subtitle: "Свяжитесь с нами сегодня",
+    //   phone: "Телефон",
+    //   email: "Электронная почта",
+    //   telegram: "Telegram",
+    //   social: "Следите за нами",
+    // },
     contact: {
-      title: "Контакты",
-      subtitle: "Свяжитесь с нами сегодня",
-      phone: "Телефон",
-      email: "Электронная почта",
-      telegram: "Telegram",
-      social: "Следите за нами",
+      title: "Свяжитесь с нами",
+      subtitle: "Мы здесь, чтобы помочь вам найти идеальный автомобиль.",
+    },
+    cta: {
+      title: "Готовы к покупке?",
+      description:
+        "Свяжитесь с нами уже сегодня, и мы поможем вам найти идеальный автомобиль. Наш опыт и профессионализм гарантируют безопасную покупку.",
+      buttons: {
+        call: "Позвонить сейчас",
+        email: "Написать письмо",
+        telegram: "Телеграм",
+        viber: "Вайбер",
+        whatsapp: "Вотсап",
+      },
+    },
+    footer: {
+      copyright: "© {year} CLIKDRIVE. Все права защищены.",
+      partnerText: "Ваш партнёр в покупке автомобиля",
     },
   },
 };
