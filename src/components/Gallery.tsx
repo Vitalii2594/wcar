@@ -1,10 +1,10 @@
 import React from "react";
 import juke1 from "../img//juke.jpg";
 import ux1 from "../img/ux.jpg";
-// import juke3 from "./src/img/juke3.jpg";
-// import juke4 from "./src/img/juke4.jpg";
-// import juke5 from "./src/img/juke5.jpg";
-// import juke6 from "./src/img/juke6.jpg";
+import auris1 from "../img/auris.jpg";
+import nissan1 from "../img/nissan.jpg";
+import c5 from "../img/c5.jpg";
+import accord1 from "../img/accord.jpg";
 
 interface GalleryProps {
   t: any;
@@ -21,19 +21,19 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
       alt: "Professional car diagnostic",
     },
     {
-      url: juke1,
+      url: auris1,
       alt: "Car documentation check",
     },
     {
-      url: juke1,
+      url: accord1,
       alt: "Engine inspection",
     },
     {
-      url: juke1,
+      url: c5,
       alt: "Car exterior check",
     },
     {
-      url: juke1,
+      url: nissan1,
       alt: "Professional car service",
     },
   ];
@@ -58,15 +58,15 @@ const Gallery: React.FC<GalleryProps> = ({ t }) => {
             >
               <img
                 src={image.url}
-                alt={image.alt}
+                // alt={image.alt}
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 flex items-end p-4">
+              {/* <div className="absolute inset-0 flex items-end p-4">
                 <h3 className="text-white text-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {image.alt}
                 </h3>
-              </div>
+              </div> */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}

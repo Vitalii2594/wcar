@@ -27,7 +27,6 @@ function App() {
       <CheckItems t={t} />
       <Gallery t={t} />
       <Contact t={t} />
-      <Contact t={t} />
     </div>
   );
 }
