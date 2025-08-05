@@ -10,11 +10,7 @@ import {
 
 // TikTok Icon jako prosty SVG komponent
 const TikTokIcon = () => (
-  <svg
-    className="w-6 h-6"
-    fill="currentColor"
-    viewBox="0 0 24 24"
-  >
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
     <path d="M16.5 3a5.5 5.5 0 0 0 5.5 5.5V12a9 9 0 1 1-9-9h3.5Z" />
   </svg>
 );
@@ -117,15 +113,21 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">{t.contact.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              {t.contact.title}
+            </h2>
             <p className="text-xl text-gray-300">{t.contact.subtitle}</p>
           </div>
 
           <div className="flex justify-center">
             <div className="bg-gray-800 rounded-2xl p-8 max-w-2xl w-full">
               <div className="text-center">
-                <h3 className="text-2xl font-bold mb-6 text-white">{t.cta.title}</h3>
-                <p className="text-gray-300 mb-8 leading-relaxed">{t.cta.description}</p>
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  {t.cta.title}
+                </h3>
+                <p className="text-gray-300 mb-8 leading-relaxed">
+                  {t.cta.description}
+                </p>
                 <div className="space-y-4">
                   {contactButtons.map((button) => (
                     <a
@@ -159,7 +161,9 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
                 height={80}
                 className="w-40 h-auto"
               />
-              <p className="text-gray-400 text-center md:text-left">{t.footer.partnerText}</p>
+              <p className="text-gray-400 text-center md:text-left">
+                {t.footer.partnerText}
+              </p>
             </div>
 
             {/* Środkowa kolumna - Instagram i TikTok */}
@@ -181,7 +185,7 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
 
                 {/* TikTok */}
                 <a
-                  href="https://www.tiktok.com/@twojprofil" // <- zamień na prawdziwy link
+                  href="https://www.tiktok.com/@clickdrivecarsele" // <- zamień na prawdziwy link
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between bg-gray-700 hover:bg-white hover:text-black text-white rounded-lg px-4 py-3 transition-all duration-200"
@@ -197,14 +201,21 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
 
             {/* Prawa kolumna - Kontakt */}
             <div className="flex flex-col items-center">
-              <p className="text-white text-lg font-semibold mb-2 text-center">Kontakt</p>
+              <p className="text-white text-lg font-semibold mb-2 text-center">
+                Kontakt
+              </p>
               <ContactInfo />
             </div>
           </div>
 
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-            <p>{t.footer.copyright.replace("{year}", new Date().getFullYear().toString())}</p>
+            <p>
+              {t.footer.copyright.replace(
+                "{year}",
+                new Date().getFullYear().toString()
+              )}
+            </p>
           </div>
         </div>
       </footer>
