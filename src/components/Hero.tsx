@@ -80,9 +80,10 @@ const Hero: React.FC<HeroProps> = ({ t, canonicalUrl = defaultCanonical, lang = 
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-xl sm:text-2xl text-cyan-100 mb-8 font-light">
-            {t.hero.subtitle}
-          </h1>
+          <h1 className="text-4xl sm:text-5xl text-cyan-100 mb-8 font-light">
+  {t.hero.subtitle}
+</h1>
+
           <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t.hero.description}
           </p>
