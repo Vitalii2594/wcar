@@ -21,7 +21,7 @@ interface HeroProps {
 }
 
 const defaultCanonical = typeof window !== 'undefined' ? window.location.href : '';
-const imageUrl = "/pexels-photo-3802510.webp"; // z folderu public
+const imageUrl = "/pexels-photo-3802510.webp";
 
 const Hero: React.FC<HeroProps> = ({ t, canonicalUrl = defaultCanonical, lang = 'pl' }) => {
   return (
@@ -51,16 +51,19 @@ const Hero: React.FC<HeroProps> = ({ t, canonicalUrl = defaultCanonical, lang = 
         <meta name="twitter:image" content={imageUrl} />
 
         {/* JSON-LD */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": t.hero.seoTitle || t.hero.title || 'Strona Główna',
-            "description": t.hero.seoDescription || t.hero.description || 'Opis strony',
-            "url": canonicalUrl,
-            "image": imageUrl
-          })}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: t.hero.seoTitle || t.hero.title || 'Strona Główna',
+              description: t.hero.seoDescription || t.hero.description || 'Opis strony',
+              url: canonicalUrl,
+              image: imageUrl,
+            }),
+          }}
+        />
       </Helmet>
 
       <section

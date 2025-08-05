@@ -1,5 +1,4 @@
 import React from "react";
-import logoFooter from "../img/logo1.png";
 import {
   Phone,
   Mail,
@@ -34,7 +33,7 @@ interface Translation {
 
 interface ContactProps {
   t: Translation;
-  logoImage?: string;
+  logoImage?: string; // optional override path
 }
 
 const ContactInfo: React.FC = () => (
@@ -42,6 +41,7 @@ const ContactInfo: React.FC = () => (
     <a
       href="tel:+48535367308"
       className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center md:justify-center"
+      aria-label="Zadzwoń pod numer +48 535 267 308"
     >
       <Phone className="w-5 h-5 mr-2" />
       +48 535 267 308
@@ -49,6 +49,7 @@ const ContactInfo: React.FC = () => (
     <a
       href="mailto:kontakt@clikdrive.pl"
       className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center md:justify-center"
+      aria-label="Wyślij email na kontakt@clikdrive.pl"
     >
       <Mail className="w-5 h-5 mr-2" />
       kontakt@clikdrive.pl
@@ -142,6 +143,7 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
                       key={button.id}
                       href={button.href}
                       className={`block w-full bg-gradient-to-r ${button.gradient} text-white py-4 px-6 rounded-full font-semibold hover:${button.hoverGradient} transition-all duration-200 shadow-lg ${button.shadow} flex items-center justify-center space-x-2`}
+                      aria-label={t.cta.buttons[button.id]}
                     >
                       <button.icon className="w-5 h-5" />
                       <span>{t.cta.buttons[button.id]}</span>
@@ -160,7 +162,14 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Lewa kolumna - Logo i tekst */}
             <div className="flex flex-col items-center md:items-start">
-              <img src={logoImage || logoFooter} alt="Logo WICAR" className="w-40 h-auto" />
+              <img
+                src={logoImage || "/logo1.webp"}
+                alt="Logo WICAR – partner serwisu ClikDrive"
+                loading="lazy"
+                width={160}
+                height={80}
+                className="w-40 h-auto"
+              />
               <p className="text-gray-400 text-center md:text-left">{t.footer.partnerText}</p>
             </div>
 
@@ -175,7 +184,7 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
                       key={index}
                       href={social.href}
                       className={`w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 ${social.color} transition-all duration-200 hover:scale-110`}
-                      aria-label={social.name}
+                      aria-label={`Odwiedź nasz profil na ${social.name}`}
                     >
                       <Icon className="w-5 h-5" />
                     </a>
