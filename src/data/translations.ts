@@ -11,7 +11,7 @@ export const translations = {
       contact: "Kontakt",
     },
     hero: {
-      title: "CLIKDRIVE",
+      title: "CLICKDRIVE",
       subtitle: "Profesjonalna pomoc w zakupie samochodu",
       description:
         "Znajdziemy dla Ciebie idealny samochód, przeprowadzimy szczegółową kontrolę techniczną i załatwimy wszystkie formalności. Zaufaj ekspertom!",
@@ -71,7 +71,7 @@ export const translations = {
       title: "Cennik",
       popularLabel: "Popularny",
       disclaimer:
-        "*Opłata za dojazd wynosi 1,5 zł za każdy przejechany kilometr. Opłaty rejestracyjne, ubezpieczenie, przegląd, serwis oraz inne wydatki pokrywa klient. CLIKDRIVE podczas współpracy występuje wyłącznie w roli pośrednika i doradcy.",
+        "*Opłata za dojazd wynosi 1,5 zł za każdy przejechany kilometr. Opłaty rejestracyjne, ubezpieczenie, przegląd, serwis oraz inne wydatki pokrywa klient. CLICKDRIVE podczas współpracy występuje wyłącznie w roli pośrednika i doradcy.",
       basic: {
         name: "Podstawowy",
         price: "1350 zł",
@@ -212,7 +212,7 @@ export const translations = {
       },
     },
     footer: {
-      copyright: "© {year} CLIKDRIVE. Wszelkie prawa zastrzeżone.",
+      copyright: "© {year} CLICKDRIVE. Wszelkie prawa zastrzeżone.",
       partnerText: "Twój partner w zakupie samochodu",
     },
   },
@@ -226,7 +226,7 @@ export const translations = {
       contact: "Контакти",
     },
     hero: {
-      title: "CLIKDRIVE",
+      title: "CLICKDRIVE",
       subtitle: "Професійна допомога у купівлі автомобіля",
       description:
         "Знайдемо для вас ідеальний автомобіль, проведемо детальну технічну перевірку та оформимо всі формальності. Довіртеся експертам!",
@@ -285,7 +285,7 @@ export const translations = {
       title: "Прайс-лист",
       popularLabel: "Популярний вибір",
       disclaimer:
-        "Плата за проїзд становить 1,5 злотого за кожен пройдений кілометр. Реєстраційні збори, страхування, техогляд, обслуговування та інші витрати покриває клієнт. CLIKDRIVE під час співпраці виступає виключно в ролі посередника та консультанта.",
+        "Плата за проїзд становить 1,5 злотого за кожен пройдений кілометр. Реєстраційні збори, страхування, техогляд, обслуговування та інші витрати покриває клієнт. CLICKDRIVE під час співпраці виступає виключно в ролі посередника та консультанта.",
 
       basic: {
         name: "Базовий",
@@ -428,7 +428,7 @@ export const translations = {
     },
 
     footer: {
-      copyright: "© {year} CLIKDRIVE. Всі права захищені.",
+      copyright: "© {year} CLICKDRIVE. Всі права захищені.",
       partnerText: "Ваш партнер у купівлі автомобіля",
     },
   },
@@ -442,7 +442,7 @@ export const translations = {
       contact: "Контакты",
     },
     hero: {
-      title: "CLIKDRIVE",
+      title: "CLICKDRIVE",
       subtitle: "Профессиональная помощь в покупке автомобиля",
       description:
         "Найдем для вас идеальный автомобиль, проведем детальную техническую проверку и оформим все формальности. Доверьтесь экспертам!",
@@ -501,7 +501,7 @@ export const translations = {
       title: "Прайс-лист",
       popularLabel: "Популярный выбор",
       disclaimer:
-        "*Плата за выезд составляет 1,5 злотых за каждый пройденный километр. Регистрационные сборы, страховка, техосмотр, обслуживание и другие расходы оплачиваются клиентом. CLIKDRIVE в процессе сотрудничества выступает исключительно в роли посредника и консультанта.",
+        "*Плата за выезд составляет 1,5 злотых за каждый пройденный километр. Регистрационные сборы, страховка, техосмотр, обслуживание и другие расходы оплачиваются клиентом. CLICKDRIVE в процессе сотрудничества выступает исключительно в роли посредника и консультанта.",
       basic: {
         name: "Базовый",
         price: "1350 zł",
@@ -642,7 +642,7 @@ export const translations = {
       },
     },
     footer: {
-      copyright: "© {year} CLIKDRIVE. Все права защищены.",
+      copyright: "© {year} CLICKDRIVE. Все права защищены.",
       partnerText: "Ваш партнёр в покупке автомобиля",
     },
   },
