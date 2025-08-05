@@ -3,11 +3,21 @@ import {
   Phone,
   Mail,
   MessageCircle,
-  Facebook,
-  Instagram,
   Send,
   MessageSquare,
+  Instagram,
 } from "lucide-react";
+
+// TikTok Icon jako prosty SVG komponent
+const TikTokIcon = () => (
+  <svg
+    className="w-6 h-6"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M16.5 3a5.5 5.5 0 0 0 5.5 5.5V12a9 9 0 1 1-9-9h3.5Z" />
+  </svg>
+);
 
 interface Translation {
   contact: {
@@ -33,7 +43,7 @@ interface Translation {
 
 interface ContactProps {
   t: Translation;
-  logoImage?: string; // optional override path
+  logoImage?: string;
 }
 
 const ContactInfo: React.FC = () => (
@@ -58,27 +68,6 @@ const ContactInfo: React.FC = () => (
 );
 
 const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
-  const socialLinks = [
-    {
-      icon: Facebook,
-      name: "Facebook",
-      href: "#",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: Instagram,
-      name: "Instagram",
-      href: "#",
-      color: "hover:text-pink-600",
-    },
-    {
-      icon: MessageCircle,
-      name: "Telegram",
-      href: "https://t.me/WJ_Channel",
-      color: "hover:text-blue-500",
-    },
-  ];
-
   const contactButtons = [
     {
       id: "call",
@@ -159,7 +148,7 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
       {/* Stopka */}
       <footer className="py-12 bg-gray-800 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             {/* Lewa kolumna - Logo i tekst */}
             <div className="flex flex-col items-center md:items-start">
               <img
@@ -173,23 +162,36 @@ const Contact: React.FC<ContactProps> = ({ t, logoImage }) => {
               <p className="text-gray-400 text-center md:text-left">{t.footer.partnerText}</p>
             </div>
 
-            {/* Środkowa kolumna - Social media */}
+            {/* Środkowa kolumna - Instagram i TikTok */}
             <div className="flex flex-col items-center">
-              <p className="text-white text-lg font-semibold mb-2 text-center">Social Media</p>
-              <div className="flex justify-center space-x-6">
-                {socialLinks.map((social, index) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={social.href}
-                      className={`w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-300 ${social.color} transition-all duration-200 hover:scale-110`}
-                      aria-label={`Odwiedź nasz profil na ${social.name}`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  );
-                })}
+              <div className="space-y-4 w-full max-w-xs">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/clickdrive.pl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-gray-700 hover:bg-pink-600 text-white rounded-lg px-4 py-3 transition-all duration-200"
+                  aria-label="Odwiedź nasz profil na Instagramie"
+                >
+                  <div className="flex items-center space-x-3">
+                    <Instagram className="w-6 h-6" />
+                    <span className="font-medium text-lg">INSTAGRAM</span>
+                  </div>
+                </a>
+
+                {/* TikTok */}
+                <a
+                  href="https://www.tiktok.com/@twojprofil" // <- zamień na prawdziwy link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between bg-gray-700 hover:bg-white hover:text-black text-white rounded-lg px-4 py-3 transition-all duration-200"
+                  aria-label="Odwiedź nasz profil na TikToku"
+                >
+                  <div className="flex items-center space-x-3">
+                    <TikTokIcon />
+                    <span className="font-medium text-lg">TIKTOK</span>
+                  </div>
+                </a>
               </div>
             </div>
 
